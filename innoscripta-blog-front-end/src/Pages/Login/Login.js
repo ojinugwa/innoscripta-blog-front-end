@@ -3,7 +3,7 @@ import axios from 'axios';
 import InputField from '../../Components/Form/InputField';
 import FormLayout from '../../Components/Form/FormLayout';
 
-function SingUp({ }) {
+function Login({ }) {
 
     const [inputs, setInputs] = useState({});
 
@@ -15,22 +15,19 @@ function SingUp({ }) {
 
     async function handleSubmit(event) {
         event.preventDefault();
-        axios.post('/register', inputs)
+        axios.post('/login', inputs)
             .then(function (res) {
-                alert(res);
+                console.log(res);
             })
             .catch(function (error) {
-                alert("We experienced error signing you up. Try again.");
+                alert("We experienced error during log in. Try again.");
             });
     }
 
     return (
         <>
             <div className='row justify-content-center'>
-                <FormLayout heading="Sign up" submitLabel="Sign up" onSubmit={handleSubmit} className='col-lg-6 col-10'>
-                    <InputField label="Name" placeholder="First & Last name" type="text" name="name" value={inputs.name || ""}
-                        onChange={handleChange}
-                    />
+                <FormLayout heading="Login" submitLabel="Login" onSubmit={handleSubmit} className='col-lg-6 col-10'>
                     <InputField label="Email" placeholder="email@domain.com" type="email" name="email" value={inputs.email || ""}
                         onChange={handleChange}
                     />
@@ -43,4 +40,4 @@ function SingUp({ }) {
     );
 }
 
-export default SingUp;
+export default Login;

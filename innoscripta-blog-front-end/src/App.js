@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import SingUp from './Pages/SignUp/SignUp';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <SingUp />
+      <Login />
     </div>
   );
 }
