@@ -20,7 +20,7 @@ function Login({ }) {
                 console.log(res);
             })
             .catch(function (error) {
-                alert("We experienced error during log in. Try again.");
+                alert("We experienced error during Login. Try again.");
             });
     }
 
