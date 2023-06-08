@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import InputField from '../../Components/Form/InputField';
-import FormLayout from '../../Components/Form/FOrmLayout';
+import FormLayout from '../../Components/Form/FormLayout';
 
 function SingUp({ }) {
 
