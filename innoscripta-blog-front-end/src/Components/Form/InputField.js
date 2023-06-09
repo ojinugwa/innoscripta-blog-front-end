@@ -1,6 +1,6 @@
 import React from 'react';
 
-function InputField({ label = "label", placeholder = "", className, type = "", name = "", value = "", help, onChange }) {
+function InputField({ label = "label", placeholder = "", className, type = "", name = "", help, onChange }) {
     return (
         <div className="m-3 form-floating">
             <input id={name} type={type} className={`form-control ${className}`} placeholder={placeholder} name={name} onChange={onChange} />
